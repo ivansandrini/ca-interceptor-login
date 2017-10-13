@@ -19,5 +19,7 @@ dependencies = {
 build = {
     type = "builtin",
     modules = {
-    }
+    ["kong.plugins.ca-interceptor-login.handler"] = "handler.lua",
+    ["kong.plugins.ca-interceptor-login.schema"] = "schema.lua"
+  }
 }
