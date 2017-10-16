@@ -9,8 +9,11 @@ end
 function CustomHandler:access(config)
   CustomHandler.super.access(self)
 
-  print(config.key_names) -- {"apikey"}
-  print(config.hide_credentials) -- false
+  if config.key_names != nil 
+    print(config.key_names) -- {"apikey"}
+  
+  if config.hide_credentials != nil
+    print(config.hide_credentials) -- false
 end
 
 return CustomHandler
